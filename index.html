@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: blueviolet;
+        }
+        .container{
+            width: 450px;
+            height: 450px;
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px;
+        }
+        .heading{
+            font-size: 30px;
+            text-align: center;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            margin: 30px 0;
+        }
+        .box textarea{
+            height: 100px;
+            width: 100%;
+            resize: none;
+            padding: 8px 10px;
+            font-size: 18px;
+            outline: none;
+            border-radius: 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 200;
+
+        }
+        .box textarea::-webkit-scrollbar{
+            display: none;
+        }
+        #voicelist,#speak{
+            outline: none;
+            height: 42px;
+            width: 100%;
+            border-radius: 5px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        #speak{
+            border: none;
+            background-color: rgba(58, 129, 214, 0.8);
+            cursor: pointer;
+            color: white;
+        }
+        #speak:hover{
+            background-color: rgb(75, 136, 241);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Text to speech</h1>
+
+        <div class="box">
+            <label>Enter Text</label>
+            <textarea id="text"></textarea>
+        </div>
+        <div class="box">
+            <label>Select voice</label>
+            <select name="" id="voicelist"></select>
+        </div>
+        <button id="speak">Convert to speech</button>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
